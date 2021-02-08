@@ -14,7 +14,8 @@
 
 		p5.setup = () => {
 			p5.createCanvas(width, height, p5.WEBGL)
-			cam = p5.createCapture(p5.VIDEO)
+			// cam = p5.createCapture(p5.VIDEO)
+			// cam.size(320,240)
 		}
 
 		p5.draw = () => {
@@ -23,14 +24,15 @@
 			// p5.fill(255,0,150)
 			// p5.box()
 			
-			// p5.ambientLight(255,255,255)
+			p5.background(160)
+			p5.ambientLight(100)
 			// let dx = p5.mouseX - {width}
 			// let dy = p5.mousey - {width}
 			// let v = p5.createVector(dx,dy,0)
-			p5.directionalLight(255,255,0)
+			p5.directionalLight(255,255,255,1,-1,0)
 			// p5.pointLight(255,0,0,200,0,0)
-			
-			p5.background(255)
+			p5.ortho()
+			// p5.push()
 			// p5.rectMode(p5.CENTER)
 			p5.rotateX(angle)
 			p5.rotateY(angle)
@@ -40,9 +42,10 @@
 			p5.stroke(0)
 			// p5.noStroke()
 			// p5.ambientMaterial(255)
-			p5.ambientLight(20,20,20)
+			// p5.ambientLight(20,20,20)
 			// p5.specularMaterial(100)
-			p5.torus(80,79)
+			p5.torus(70,69)
+			// p5.pop()
 
 			angle += 0.02
 		}
